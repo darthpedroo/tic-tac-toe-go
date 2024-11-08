@@ -17,23 +17,27 @@ func (drawer ConsoleBoardDrawer) DrawBoard() {
 
 	for boardIterator.HasNext() {
 
-		
-		
-		piece := boardIterator.GetNext()
-		
+		piece := boardIterator.GetNext()		
+		fmt.Print(" | ")
 		fmt.Print(piece.GetPiece())
 		fmt.Print(" | ")
 		currentColumn += 1
-		
-		if currentColumn%columns == 0 {
-			fmt.Println("")
-			for column := 0; column < columns; column++{
-				fmt.Printf("  ")
-			}
-			fmt.Println("")
-			
-		}
+		drawSpacesBetweenTiles(currentColumn, columns)
+				
 	}
+}
+
+func drawSpacesBetweenTiles(currentColumn int, columns int) {
+
+	if currentColumn%columns == 0 {
+		fmt.Println("")
+		for column := 0; column < columns; column++{
+			fmt.Printf("  ")
+		}
+		fmt.Println("")
+		
+	}
+
 }
 
 

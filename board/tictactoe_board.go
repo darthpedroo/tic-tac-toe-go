@@ -27,7 +27,7 @@ func NewTicTacToeBoard(columns int, rows int) *TicTacToeBoard {
 
 	for i := 0; i < columns; i++ {
 		for j := 0; j < rows; j++ {
-			board[i][j] = pieces.NewNormalTicTacToePiece(i, j, "ñ")
+			board[i][j] = pieces.NewNormalTicTacToePiece(i, j, "-")
 		}
 	}
 
