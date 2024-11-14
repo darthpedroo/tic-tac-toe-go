@@ -18,6 +18,7 @@ func (player Player) PlayPiece(b board.Iboard, posX int, posY int) {
 
 }
 
+
 func NewPlayer(piece string, getNamer GetNamer) Player {
 	return Player{
 		pieceStr:    piece,
